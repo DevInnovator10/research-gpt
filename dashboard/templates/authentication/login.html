@@ -1,0 +1,105 @@
+{% extends 'base.html' %}
+
+{% block title %}Login{% endblock %}
+
+{% block content %}
+<style>
+    .field-wrapper input {
+        width: 100%;
+        padding: 12px 16px;
+        padding-left: 44px;
+        border: 1px solid #d1d5db;
+        border-radius: 8px;
+        background-color: rgba(255, 255, 255, 0.5);
+        backdrop-filter: blur(4px);
+        transition: all 0.2s ease;
+        outline: none;
+    }
+    .field-wrapper input:focus {
+        border-color: #6366f1;
+        box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.2);
+    }
+    .field-wrapper input::placeholder {
+        color: #9ca3af;
+    }
+</style>
+<div class=" flex items-center justify-center mt-[2px] h-[93vh] bg-[url('https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')] bg-cover bg-center">
+    <div class="absolute inset-0 bg-black/50"></div>
+    <div class=" mt-20">
+    <div class="max-w-md w-full space-y-8 ">
+        <!-- Logo/Brand Section -->
+        
+
+        <!-- Login Form -->
+        <div class="bg-white/70 backdrop-blur-sm rounded-2xl shadow-xl border border-white/20 p-8 -mt-10">
+            <div class="text-center">
+            <h2 class="text-3xl font-bold text-gray-900 mb-2">Login</h2>
+            </div>
+            <hr>
+            <form method="POST" class="space-y-6">
+                {% csrf_token %}
+                
+                <!-- Form Fields Container -->
+                <div class="space-y-5">
+                    {% for field in form %}
+                        <div class="relative">
+                            <label for="{{ field.id_for_label }}" class="block text-sm font-medium text-gray-700 mb-2">
+                                {{ field.label }}
+                            </label>
+                            <div class="relative">
+                                <div class="field-wrapper relative">
+                                    {{ field }}
+                                    {% if field.name == 'username' %}
+                                        <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                                            <svg class="h-5 w-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
+                                            </svg>
+                                        </div>
+                                    {% elif field.name == 'password' %}
+                                        <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                                            <svg class="h-5 w-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
+                                            </svg>
+                                        </div>
+                                    {% endif %}
+                                </div>
+                            </div>
+                            {% if field.errors %}
+                                <div class="mt-1 text-sm text-red-600">
+                                    {% for error in field.errors %}
+                                        <p>{{ error }}</p>
+                                    {% endfor %}
+                                </div>
+                            {% endif %}
+                        </div>
+                    {% endfor %}
+                </div>
+
+                <!-- Remember Me -->
+                <div class="flex items-center text-sm">
+                    <label class="flex items-center">
+                        <input type="checkbox" class="rounded border-gray-300 text-indigo-600 focus:ring-indigo-500">
+                        <span class="ml-2 text-gray-600">Remember me</span>
+                    </label>
+                </div>
+
+                <!-- Hidden Next Field -->
+                <input type="hidden" name="next" value="{{ next }}">
+
+                <!-- Submit Button -->
+                <button type="submit" class="group relative w-full flex justify-center py-3 px-4 border border-transparent text-sm font-medium rounded-lg text-white bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition-all duration-200 transform hover:scale-[1.02] active:scale-[0.98]">
+                    <span class="absolute left-0 inset-y-0 flex items-center pl-3">
+                        <svg class="h-5 w-5 text-indigo-300 group-hover:text-indigo-400 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1"/>
+                        </svg>
+                    </span>
+                    Sign in
+                </button>
+            </form>
+        </div>
+
+       
+    </div>
+    </div>
+</div>
+{% endblock %}
