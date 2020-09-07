@@ -12,6 +12,7 @@
   "keywords": [],
   "author": "",
   "license": "MIT",
+
   "devDependencies": {
     "@tailwindcss/postcss": "^4.1.0",
     "cross-env": "^7.0.3",
