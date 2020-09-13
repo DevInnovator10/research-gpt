@@ -1499,6 +1499,7 @@
   initial-value: 100%;
 }
 @property --tw-leading {
+
   syntax: "*";
   inherits: false;
 

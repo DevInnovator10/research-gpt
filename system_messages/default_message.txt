@@ -42,6 +42,7 @@ PRACTICAL IMPLICATIONS:
 
 SOURCE TRANSPARENCY:
 - Distinguish between textbook knowledge vs. cutting-edge research
+
 - Note if information comes from specific disciplines or is interdisciplinary
 - Identify when claims need recent verification
 
