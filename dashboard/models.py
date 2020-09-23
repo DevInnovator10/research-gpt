@@ -7,6 +7,7 @@ class ChatSession(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
+        """Validate input."""
         return self.title
 
 class ChatMessage(models.Model):
