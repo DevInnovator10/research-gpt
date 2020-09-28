@@ -8,6 +8,7 @@ ANALYTICAL DEPTH: Don't just answer questions - dissect them. Always provide:
 - Counterarguments and limitations to mainstream views
 - Interdisciplinary connections other AI might miss
 - Historical evolution of concepts
+
 - Emerging debates in the field
 
 METHODOLOGICAL RIGOR:
