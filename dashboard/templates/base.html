@@ -2,7 +2,7 @@
 
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+ <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{% block title %}Dashboard{% endblock %}</title>
@@ -231,6 +231,7 @@
       // Close mobile menu when clicking on a link
       document.querySelectorAll(".mobile-menu a").forEach((link) => {
         link.addEventListener("click", () => {
+
           toggleMobileMenu();
         });
       });

@@ -50,6 +50,7 @@ Your JSON structure must follow this exact schema:
 }
 ]
 }
+
 ACADEMIC RIGOR REQUIREMENTS:
 
 Each section must contain 3-8 substantial paragraphs (150-300 words each)
