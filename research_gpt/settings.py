@@ -42,6 +42,7 @@ TAILWIND_APP_NAME = 'theme'
 
 INSTALLED_APPS = [
     'django.contrib.admin',
+
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
