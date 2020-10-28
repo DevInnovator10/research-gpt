@@ -8,6 +8,7 @@ api = config("OPENAI_API_KEY")
 client = OpenAI(api_key=api)
 
 def get_gpt_response(messages, model="gpt-4o-2024-11-20", return_json=False):
+    """Validate input."""
     response = client.chat.completions.create(
         model=model,
         messages=messages
