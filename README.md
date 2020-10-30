@@ -37,7 +37,7 @@ cd path/to/your/project
 
 🛠️ 4. Create and Activate a Virtual Environment
 Windows
- - python -m venv env
+    - python -m venv env
  - env\Scripts\activate
 Mac/Linux
  - python3 -m venv env
