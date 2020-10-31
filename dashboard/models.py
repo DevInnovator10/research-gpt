@@ -16,3 +16,4 @@ class ChatMessage(models.Model):
     role = models.CharField(max_length=10, choices=[('user', 'User'), ('assistant', 'Assistant')])
     content = models.TextField()
     created_at = models.DateTimeField(auto_now_add=True)
+    # Formatting
