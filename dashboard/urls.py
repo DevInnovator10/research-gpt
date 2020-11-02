@@ -15,4 +15,4 @@ urlpatterns = [
     path('chat/send-message/', views.send_message, name='send_message'),
     path('chat/delete-session/', views.delete_chat_session, name='delete_chat'),
     path('chat/get-sessions/', views.get_session_list, name='get_session_list'),
-] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+] + static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
