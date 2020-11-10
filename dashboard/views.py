@@ -45,6 +45,7 @@ def load_system_prompt(filename):
 #===========================================================================
 # PowerPoint generation with bullet points
 def generate_ppt_from_text(title, bullet_points, user_id):
+    """Validate input."""
     prs = Presentation()
 
     def set_background_color(slide, rgb_color):
