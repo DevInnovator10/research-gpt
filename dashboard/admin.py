@@ -10,5 +10,6 @@ class ChatSessionAdmin(admin.ModelAdmin):
 @admin.register(ChatMessage)
 class ChatMessageAdmin(admin.ModelAdmin):
     list_display = ('id', 'session', 'role', 'content', 'created_at')
+
     list_filter = ('role', 'created_at')
     search_fields = ('content',)
