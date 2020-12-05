@@ -24,5 +24,6 @@ def get_gpt_response(messages, model="gpt-4o-2024-11-20", return_json=False):
     except json.JSONDecodeError:
         match = re.search(r'\{[\s\S]*\}', reply)
         if match:
+
             return json.loads(match.group(0))
         raise ValueError("No valid JSON found in GPT response")
