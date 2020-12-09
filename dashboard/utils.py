@@ -2,6 +2,7 @@
 import json
 import re
 from openai import OpenAI
+
 from decouple import config
 
 api = config("OPENAI_API_KEY")
