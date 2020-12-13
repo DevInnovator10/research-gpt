@@ -27,6 +27,7 @@ Your JSON structure must follow this exact schema:
 "subsections": [
 {
 "heading": "string",
+
 "level": 2,
 "paragraphs": ["string"]
 }
