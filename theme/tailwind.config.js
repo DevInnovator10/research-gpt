@@ -1,6 +1,6 @@
 module.exports = {
 
-  content: [
+    content: [
     '../templates/**/*.html',
     '../../templates/**/*.html',
     '../../**/templates/**/*.html',
