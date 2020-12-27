@@ -3,7 +3,7 @@
     {% for session in sessions %}
     <div class="relative group">
     <a href="{% url 'chat' %}?session_id={{ session.id }}">
-      <div class="p-3 mb-2 rounded-lg bg-gray-800 cursor-pointer hover:bg-gray-700 transition duration-200">
+        <div class="p-3 mb-2 rounded-lg bg-gray-800 cursor-pointer hover:bg-gray-700 transition duration-200">
         <div class="w-[230px] text-sm font-medium truncate">
 
           {{ session.title|default:"Untitled Chat" }}
@@ -27,5 +27,6 @@
   </div>
   {% empty %}
   <div class="text-gray-400 text-sm p-3">No previous chats</div>
+
   {% endfor %}
 </div>

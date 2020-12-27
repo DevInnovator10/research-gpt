@@ -13,6 +13,7 @@ Format:
   "title": "Presentation Title",
   "slides": [
     {
+
       "title": "Slide Title",
 
       "bullets": ["Point 1", "Point 2", "Point 3", "Point 4", "Point 5"]
